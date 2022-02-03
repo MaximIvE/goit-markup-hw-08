@@ -1,0 +1,102 @@
+.footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--footer-color);
+}
+
+.footer__block{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.footer__contact-group{
+    display:flex;
+    align-items: baseline;
+}
+
+.direct-block{
+    margin-top: 20px;
+    font-style: normal;
+}
+
+.direct-block__list{
+    @include font(null, 14px, 1.71, 0.03em);
+    margin-bottom: 9px;
+    color: var(--background);
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.direct-block__adds{
+    color: var(--background);
+    transition-property: color;
+    transition-duration: var(--effect-time);
+    transition-timing-function: var(--function-time); 
+    padding: 2px 4px;
+    &:hover, &:focus{
+    color: var(--footer-hover-text-one);
+    }
+}
+
+.direct-block__cont{
+    color: var(--footer-cont-color);
+    transition-property: color;
+    transition-duration: var(--effect-time);
+    transition-timing-function: var(--function-time); 
+    padding: 2px 4px;
+    &:hover, &:focus{
+        color: var(--footer-hover-text-two);
+    }  
+}
+
+.links-block{
+    margin-left: 70px;  
+}
+
+.links-block__title{
+    margin-bottom: 20px;
+    color: var(--background);
+}
+
+.social__icon_footer{
+    background-color: var(--footer-icons-background); 
+    @include effect(background-color); 
+    &:hover, &:focus{
+        background-color: var(--accent-color);
+    }
+}
+
+.social-list__icon_footer{
+    fill: var(--background);
+}
+
+.subscription{
+    margin-left:93px;
+    display: block;
+    flex-grow: 1;
+}
+
+.subscript__elements{
+    display:flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+.subscript-mail{
+    @include font(null, 16px, 1.25, 0.03em);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: #2F303A;
+    padding:  15px 16px;
+    /* Исправить на нормальную автоматическую ширину */
+    min-width:  358px;
+    color: var(--footer-cont-color);
+    flex-grow: 1;
+}
+
+.subscribe-icon{
+    margin-left:10px;
+}

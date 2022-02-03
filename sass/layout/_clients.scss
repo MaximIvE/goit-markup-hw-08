@@ -1,0 +1,33 @@
+.clients{
+    display: flex;
+    justify-content: center;
+}
+
+.clients__item{
+    &+&{
+        margin-left: 30px;
+    }
+}
+
+.clients__link{
+    @extend %list;
+    @include effect(border-color);
+    @include effect(color);
+    height: 92px;
+    width: 170px;
+    border: 1px solid var(--icons-color);
+    border-radius: 4px;
+    justify-content: center;
+    color:var(--icons-color); 
+    &:hover, &:focus{
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+    &:focus{
+        outline-color: var(--accent-color);
+    }
+}
+
+.clients__icon{
+    fill: currentColor;
+}

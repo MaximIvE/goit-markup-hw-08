@@ -1,0 +1,26 @@
+.specification{
+  display: flex;
+  justify-content: center;
+}
+
+.specification__item{
+  display: flex;
+  position: relative;
+  align-items: end;
+  margin-right: 30px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.specification__label{
+  @extend %list;
+  @include font(700, 14px, 1.14, 0.03em);
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+  color: var(--first-title-color);
+  background-color: var(--spec-label-background);
+}

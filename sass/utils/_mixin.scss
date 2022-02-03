@@ -1,0 +1,14 @@
+@mixin font($fw, $fs, $lh, $ls) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+  }
+  // @include font($fw, $fs, $lh, $ls);
+  
+  @mixin effect($tp) {
+    transition-property: $tp;
+    transition-duration: var(--effect-time);
+    transition-timing-function: var(--function-time);
+  }
+  // @include effect($tp);

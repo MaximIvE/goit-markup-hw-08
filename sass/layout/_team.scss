@@ -1,0 +1,64 @@
+.team{
+    display: flex;
+    justify-content: center;
+}
+
+.team__item{
+    background-color: var(--background);
+    margin-right: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.team__content{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team__title{
+    @include font(500, 16px, 1.19, 0.03em);
+    margin-bottom: 10px;   
+    text-align: center;
+    color: var(--second-title-color)
+}
+
+.team__text{
+    @include font(null, 16px, 1.19, 0.03em);
+    text-align: center;
+    color: var(--p-title-color);
+    margin-bottom: 16px;
+}
+
+.social-list{
+    display: flex;
+    justify-content: center;
+}
+
+.social__icon{
+    @extend %list;
+    height: 44px;
+    width: 44px;
+    /* background-color: teal; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    & + &{
+        margin-left: 10px;
+    }
+}
+
+.social-list__team{
+    color:var(--icons-color);
+    @include effect(color);
+    &:hover, &:focus{
+        background-color: var(--accent-color);
+        color: var(--background);
+    }
+}
+
+.social-list__icon{
+    fill: currentColor;
+}

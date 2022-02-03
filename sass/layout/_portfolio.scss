@@ -1,0 +1,77 @@
+.portfolio{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__item{
+  margin-right: 8px;
+  &:last-child{
+      margin-right: 0px;
+  }
+}
+
+.portfolio__item{
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  &:nth-child(3n){margin-right: 0;}
+  &:nth-child(n + 7){margin-bottom: 0;}
+}
+
+.portfolio__links{
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: var(--effect-time);
+  transition-timing-function: var(--function-time);
+  &:hover, &:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio__item-wrap{
+  position: relative;
+  overflow: hidden;
+}
+
+.pirtfolio__img-txt{
+  @include font(null, 18px, 1.56, 0.03em);
+  @include effect(transform);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  color: var(--first-title-color);
+  background-color: var(--portf-img-txt-color);
+  height: 100%;
+
+  transform: translateY(100%); 
+    /* И на случай переполнения контента */
+    /* overflow: auto;     */
+  .portfolio__links:hover &, .portfolio__links:focus &{
+      transform: translateY(0);
+  } 
+}
+  
+.portfolio__content{
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.portfolio__title{
+  @include font(700, 18px, 2, 0.06em);
+  margin-bottom: 4px;
+  color: var(--second-title-color);
+}
+
+.portfolio__text{
+  @include font(null, 16px, 1.87, 0.03em);
+  color: var(--p-title-color);
+}

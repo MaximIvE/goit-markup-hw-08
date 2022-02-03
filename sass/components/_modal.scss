@@ -1,0 +1,125 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--modal-background);
+    transition: opacity 500ms ,visibility 500ms;
+    transition-timing-function: var(--function-time);
+}
+
+.modal{
+    position: absolute;
+    padding:40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    min-height: 581px;
+    background: var(--background);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    /* visibility: hidden; */
+}
+
+.modal__title{
+    @include font(600, 20px, 1.15, 0.03em);
+    text-align: center;
+    color: var(--second-title-color);
+    margin-bottom: 12px;
+}
+
+.online__field{
+    margin-bottom: 10px;
+}
+
+.online__input-wrap{
+    position: relative;
+}
+
+.online__input-icon{
+    @include effect(fill);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    .online__input-form:focus + &{
+        fill:var(--accent-color); 
+    }
+}
+
+.online__lables{
+    @include font(null, 12px, 1.17h, 0.01em);
+    display: block;
+    color:var(--p-title-color);
+    margin-bottom: 4px;
+    transition: none;
+}
+
+.online__input-form{
+    @include effect(border-color);
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    &:focus{
+    border-color:var(--accent-color);
+    outline: none;
+    }
+}
+
+.online__input{
+    height: 40px;
+    padding-left: 42px;
+}
+
+.online__comment-input{
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    height: 120px;
+    resize: none;
+    &::placeholder{
+        @include font(null, 14px, 1.14, 0.01em);
+    }
+}
+
+.form-check{
+    margin-bottom: 30px;
+}
+
+.form-check__text{
+    @extend %list;
+    @include font(null, 14px, 1.71, 0.03em);
+    justify-content: center;
+    color: var(--p-title-color);
+    & span{
+        @extend %list;
+        width: 16px;
+        height: 15px;
+        border: 2px solid #212121;
+        border-radius: 2px;
+        margin-right: 7px;
+        justify-content: center;
+    }
+    .form-check__policy:checked + & span{
+        border:none;
+        background-color: var(--accent-color);
+    }
+}
+
+.form-check__icon{
+    fill: transparent;
+    .form-check__policy:checked + .form-check__text &{
+        fill: #ffffff;
+    }
+}
+
+.form-check__link{
+    color:var(--accent-color);
+    margin-left: 0.3em;
+} 
