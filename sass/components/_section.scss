@@ -13,6 +13,9 @@
 
     &__team-background{
         background-color: var(--background-elements);
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__hide{
         @media  screen and (max-width:1200px) {
