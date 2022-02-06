@@ -1,13 +1,18 @@
 .clients{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     margin: -15px;
-    margin-bottom: 200px;
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
 }
 
 .clients__item{
     margin: 15px;
-    flex-basis: calc((100% - 180px) / 6);
+    flex-basis: calc(100% / 2 - 30px);
+    @media screen and (min-width: 768px) {
+        max-width: calc(100% / 3 - 30px);  
+    }
 }
 
 .clients__link{
