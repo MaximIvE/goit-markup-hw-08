@@ -247,11 +247,20 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
+  width: calc(100% - 30px);
+  min-width: 290px;
+  max-width: 450px;
+  min-height: 609px;
   background: var(--background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .is-hidden {
@@ -263,11 +272,20 @@ a {
 .modal__title {
   font-weight: 600;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--second-title-color);
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 .online__field {
@@ -336,15 +354,29 @@ a {
 }
 
 .form-check {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-check {
+    margin-bottom: 30px;
+  }
 }
 
 .form-check__text {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   justify-content: center;
   color: var(--p-title-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .form-check__text {
+    font-size: 14px;
+    line-height: 1.67;
+    letter-spacing: 0.03em;
+  }
 }
 
 .form-check__text span {
@@ -489,7 +521,7 @@ a {
   letter-spacing: 0.06em;
   margin-left: auto;
   margin-right: auto;
-  width: 360px;
+  max-width: 360px;
   margin-bottom: 30px;
   text-transform: uppercase;
   color: #ffffff;
