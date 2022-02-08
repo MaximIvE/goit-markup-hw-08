@@ -7,10 +7,6 @@
     &:hover, &:focus{
         color: var(--accent-color);
     }
-    
-    &__accent{
-        color: var(--accent-color);
-    }
 }
 
 
@@ -23,6 +19,6 @@
     color: var(--background);
 }
 
-// .logo__accent{
-//     color: var(--accent-color);
-// }
+.logo__accent{
+    color: var(--accent-color);
+}
