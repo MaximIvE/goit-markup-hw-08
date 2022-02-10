@@ -68,6 +68,12 @@ a {
   margin: -1px;
 }
 
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  /* visibility: hidden; */
+}
+
 /* Общие стили для всех кнопок */
 .btn {
   display: inline-block;
@@ -131,7 +137,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  outline: 2px solid tomato;
+  outline: 1px solid tomato;
 }
 
 @media screen and (min-width: 480px) {
@@ -154,8 +160,8 @@ a {
 
 .logo {
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.67;
   letter-spacing: 0.03em;
   transition-property: color;
   transition-duration: var(--effect-time);
@@ -163,6 +169,15 @@ a {
   font-family: Raleway;
   text-decoration: none;
   padding: 2px 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 
 .logo:hover, .logo:focus {
@@ -226,42 +241,55 @@ a {
   }
 }
 
-.backdropp {
+.mob-menu {
   position: fixed;
-  top: 0;
+  background-color: var(--background);
   width: 100vw;
   height: 100vh;
-  background-color: var(--modal-background);
-  transition: opacity 500ms ,visibility 500ms;
-  transition-timing-function: var(--function-time);
+  left: 0px;
+  top: 0px;
+  z-index: 1;
 }
 
-.modall {
-  position: absolute;
-  padding: 40px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 30px);
-  min-width: 290px;
-  max-width: 450px;
-  min-height: 609px;
-  background: var(--background);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-@media screen and (min-width: 1200px) {
-  .modall {
-    max-width: 528px;
-    min-height: 581px;
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
   }
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  /* visibility: hidden; */
+.mob-menu-contanier {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 40px;
+  outline: 1px solid tomato;
+}
+
+.menu__btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: var(--background);
+  border: none;
+  padding: 0;
+}
+
+.menu-nav {
+  margin-bottom: 302px;
+}
+
+.menu-nav__item {
+  margin-bottom: 32px;
+}
+
+.menu-nav__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  color: #212121;
 }
 
 .backdrop {
@@ -294,12 +322,6 @@ a {
     max-width: 528px;
     min-height: 581px;
   }
-}
-
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  /* visibility: hidden; */
 }
 
 .modal__title {
@@ -446,7 +468,15 @@ a {
 
 .contanier__header {
   justify-content: space-between;
-  min-height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .contanier__header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -473,7 +503,7 @@ a {
   padding: 0;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .header__btn {
     display: none;
   }
@@ -494,7 +524,7 @@ a {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
   }
@@ -544,20 +574,32 @@ a {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .contacts {
     display: flex;
     align-items: center;
     margin-left: auto;
   }
+  .contacts:first-child {
+    margin-bottom: 0;
+  }
 }
 
-.contacts__item {
-  margin-right: 50px;
+.contacts__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
-.contacts__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 0px;
+    margin-right: 50px;
+  }
 }
 
 .contacts__link {

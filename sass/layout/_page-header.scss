@@ -6,7 +6,12 @@
 .contanier__header{
   @extend %list;
   justify-content: space-between;
-  min-height: 60px;
+  padding-top: 10px;
+    padding-bottom: 10px;
+  @media  screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
   @media  screen and (min-width: 1200px) {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -25,7 +30,7 @@
   background-color: var(--background);
   border: none;
   padding: 0;
-  @media  screen and (min-width: 1200px) {
+  @media  screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -40,7 +45,7 @@
 
 .site-nav{ 
   display: none;
-  @media  screen and (min-width: 1200px) {
+  @media  screen and (min-width: 768px) {
     display: flex;
   }
   
@@ -83,19 +88,31 @@
 
 .contacts{
   display: none;
+  @media  screen and (min-width: 768px){
+    display: block;
+    
+    
+  }
   @media  screen and (min-width: 1200px) {
+    &:first-child{
+      margin-bottom: 0;
+    }
     display: flex;
     align-items: center;
     margin-left: auto;
   }
-  
-
-  
+   
 }
 .contacts__item{
-  margin-right: 50px;
-  &:last-child{
-    margin-right: 0;
+
+  &:not(:last-child){
+    margin-bottom: 10px;
+  }
+  @media  screen and (min-width: 1200px){
+    &:not(:last-child){
+      margin-bottom: 0px;
+      margin-right: 50px;
+    }
   }
 }
 
