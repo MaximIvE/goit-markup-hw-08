@@ -138,30 +138,43 @@
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <ul class="specification">
                     <li class="specification__item">
-                        <img srcset="
-                            ./images/img-desc-klava-1.jpg 1x, 
-                            ./images/img-desc-klava-2.jpg 2x
-                        " 
-                        alt="Человек пишет десктопное приложение" 
-                        width="370">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/img-desc-klava-1.jpg 1x, 
+                                    ./images/img-desc-klava-2.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <img src="./images/img-desc-klava-1.jpg" alt="Человек пишет десктопное приложение" 
+                            width="370">
+                        </picture>
                         <p class="specification__label">Десктопные приложения</p>
                     </li>
                     <li class="specification__item">
-                        <img srcset="
-                            ./images/img-desc-phone-1.jpg 1x, 
-                            ./images/img-desc-phone-2.jpg 2x
-                        " 
-                        alt="Человек разрабатывает мобильное приложение"
-                        width="370">
+                        <source
+                                srcset="
+                                    ./images/img-desc-phone-1.jpg 1x, 
+                                    ./images/img-desc-phone-2.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <img src="./images/img-desc-phone-1.jpg" alt="Человек разрабатывает мобильное приложение" 
+                            width="370">
+                        </picture>
                         <p class="specification__label">Мобильные приложения</p>
                     </li>
                     <li class="specification__item">
-                        <img srcset="
-                            ./images/img-desc-pen-1.jpg 1x, 
-                            ./images/img-desc-pen-2.jpg 2x
-                        " 
-                        alt="Человек разрабатывает дизайн"
-                        width="370">
+                        <source
+                                srcset="
+                                    ./images/img-desc-pen-1.jpg 1x, 
+                                    ./images/img-desc-pen-2.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <img src="./images/img-desc-pen-1.jpg" alt="Человек разрабатывает дизайн" 
+                            width="370">
+                        </picture>
                         <p class="specification__label">Дизайнерские решения</p>
                     </li>
                 </ul>
