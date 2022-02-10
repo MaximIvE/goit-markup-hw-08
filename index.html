@@ -138,19 +138,28 @@
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <ul class="specification">
                     <li class="specification__item">
-                        <img src="./images/desktop.jpg" 
+                        <img srcset="
+                            ./images/img-desc-klava-1.jpg 1x, 
+                            ./images/img-desc-klava-2.jpg 2x
+                        " 
                         alt="Человек пишет десктопное приложение" 
                         width="370">
                         <p class="specification__label">Десктопные приложения</p>
                     </li>
                     <li class="specification__item">
-                        <img src="./images/mobile.jpg" 
+                        <img srcset="
+                            ./images/img-desc-phone-1.jpg 1x, 
+                            ./images/img-desc-phone-2.jpg 2x
+                        " 
                         alt="Человек разрабатывает мобильное приложение"
                         width="370">
                         <p class="specification__label">Мобильные приложения</p>
                     </li>
                     <li class="specification__item">
-                        <img src="./images/design.jpg" 
+                        <img srcset="
+                            ./images/img-desc-pen-1.jpg 1x, 
+                            ./images/img-desc-pen-2.jpg 2x
+                        " 
                         alt="Человек разрабатывает дизайн"
                         width="370">
                         <p class="specification__label">Дизайнерские решения</p>
@@ -164,7 +173,30 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="team">
                     <li class="team__item">
-                        <img src="./images/igor.jpg" alt="Дизайнер" width="270">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/igor-mob-1.jpg 1x,
+                                    ./images/igor-mob-2.jpg 2x
+                                "
+                                media="(min-width: 320px) and (max-width: 768px)"
+                            />
+                            <source
+                                srcset="
+                                    ./images/igor-tab-1.jpg 1x,
+                                    ./images/igor-tab-2.jpg 2x
+                                "
+                                media="(min-width: 768px) and (max-width:1200px)"
+                            />
+                            <source
+                                srcset="
+                                    ./images/igor-desc-1.jpg 1x,
+                                    ./images/igor-desc-2.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <img src="./images/igor-desc-1.jpg" alt="Дизайнер">
+                        </picture>
                         <div class="team__content">
                             <h3 class="team__title">Игорь Демьяненко</h3>
                             <p class="team__text">Product Designer</p>  
@@ -201,7 +233,30 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/olga.jpg" alt="Фронтенд-разработчик" width="270">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/olga-mob-1.jpg 1x,
+                                    ./images/olga-mob-2.jpg 2x
+                                "
+                                media="(min-width: 320px) and (max-width: 768px)"
+                            />
+                            <source
+                                srcset="
+                                    ./images/olga-tab-1.jpg 1x,
+                                    ./images/olga-tab-2.jpg 2x
+                                "
+                                media="(min-width: 768px) and (max-width:1200px)"
+                            />
+                            <source
+                                srcset="
+                                    ./images/olga-desc-1.jpg 1x,
+                                    ./images/olga-desc-2.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <img src="./images/olga-desc-1.jpg" alt="Фронтенд-разработчик">
+                        </picture>
                         <div class="team__content">
                             <h3 class="team__title">Ольга Репина</h3>
                             <p class="team__text">Frontend Developer</p>
@@ -238,7 +293,30 @@
                         </div>    
                     </li>
                     <li class="team__item">
-                        <img src="./images/nikolaj.jpg" alt="Маркетолог" width="270">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/nikola-mob-1.jpg 1x,
+                                    ./images/nikola-mob-2.jpg 2x
+                                "
+                                media="(min-width: 320px) and (max-width: 768px)"
+                            />
+                            <source
+                                srcset="
+                                    ./images/nikola-tab-1.jpg 1x,
+                                    ./images/nikola-tab-2.jpg 2x
+                                "
+                                media="(min-width: 768px) and (max-width:1200px)"
+                            />
+                            <source
+                                srcset="
+                                    ./images/nikola-desc-1.jpg 1x,
+                                    ./images/nikola-desc-2.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <img src="./images/nikola-desc-1.jpg" alt="Маркетолог">
+                        </picture>
                         <div class="team__content">
                             <h3 class="team__title">Николай Тарасов</h3>
                             <p class="team__text">Marketing</p>
@@ -275,7 +353,29 @@
                         </div>    
                     </li>
                     <li class="team__item">
-                        <img src="./images/michael.jpg" alt="Дизайнер" width="270">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/mihail-mob-1.jpg  1x,
+                                    ./images/mihail-mob-2.jpg  2x
+                                "
+                                media="(min-width: 320px) and (max-width: 768px)"
+                            />
+                            <source
+                                srcset="
+                                    ./images/mihail-tab-1.jpg  1x,
+                                    ./images/mihail-tab-2.jpg  2x
+                                "
+                                media="(min-width: 768px) and (max-width:1200px)"
+                            />
+                            <source
+                                srcset="
+                                    ./images/mihail-desc-1.jpg  1x,
+                                    ./images/mihail-desc-2.jpg  2x"
+                                media="(min-width: 1200px)"
+                            />
+                            <img src="./images/mihail-desc-1.jpg" alt="Дизайнер">
+                        </picture>
                         <div class="team__content">
                             <h3 class="team__title">Михаил Ермаков</h3>
                             <p class="team__text">UI Designer</p>
@@ -314,7 +414,7 @@
                 </ul>
             </div>
         </section>
- <!-- ------------------------CLIENTS------------------ -->
+<!-- ------------------------CLIENTS------------------ -->
         <section class="section">
             <div class="contanier">
                 <h2 class="section__title">Постоянные клиенты</h2>
@@ -365,7 +465,7 @@
             </div>
         </section>
     </main>
-    <!-- -----------------FOOTER-------------- -->
+<!-- -----------------FOOTER-------------- -->
     <footer class="footer">
         <div class="contanier footer__contanier">
             <div class="footer__block"> 
