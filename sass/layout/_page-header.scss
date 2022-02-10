@@ -7,7 +7,7 @@
   @extend %list;
   justify-content: space-between;
   padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 21px;
   @media  screen and (min-width: 768px) {
     padding-top: 21px;
     padding-bottom: 21px;
@@ -26,17 +26,21 @@
   }
 }
 
-.header__btn{
+.menu-btn{
   background-color: var(--background);
-  border: none;
+  border: transparent;
   padding: 0;
+  cursor: pointer;
+  fill: #212121;
+}
+
+.menu-btn__header{
   @media  screen and (min-width: 768px) {
     display: none;
   }
 }
 
-.header__menu-open{
-  fill: #212121;
+.menu-btn__open{
   @include effect(fill);
   &:hover, &:focus{
     fill: var(--accent-color);
@@ -48,7 +52,6 @@
   @media  screen and (min-width: 768px) {
     display: flex;
   }
-  
 }
 
 .site-nav__item{
