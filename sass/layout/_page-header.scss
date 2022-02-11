@@ -31,7 +31,7 @@
   border: transparent;
   padding: 0;
   cursor: pointer;
-  fill: #212121;
+  
 }
 
 .menu-btn__header{
@@ -41,6 +41,7 @@
 }
 
 .menu-btn__open{
+  fill: #212121;
   @include effect(fill);
   &:hover, &:focus{
     fill: var(--accent-color);
