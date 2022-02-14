@@ -7,7 +7,7 @@
   @extend %list;
   justify-content: space-between;
   padding-top: 10px;
-    padding-bottom: 21px;
+  padding-bottom: 10px;
   @media  screen and (min-width: 768px) {
     padding-top: 21px;
     padding-bottom: 21px;
@@ -69,7 +69,9 @@
   transition-property: color;
   transition-duration: var(--effect-time);
   transition-timing-function: var(--function-time); 
-  padding: 2px 4px;
+  @media  screen and (min-width: 1200px) {
+    padding: 2px 4px;
+  }
   &:hover, &:focus{
     color: var(--accent-color);
   }
@@ -86,16 +88,18 @@
     background-color: var(--accent-color);
     position: absolute;
     left: 0;
-    bottom: -31.5px;
+    bottom: -34.5px;
+    @media  screen and (min-width: 1200px){
+      bottom: -32px;
+    }
   }
+  align-items:baseline;
 }
 
 .contacts{
   display: none;
   @media  screen and (min-width: 768px){
     display: block;
-    
-    
   }
   @media  screen and (min-width: 1200px) {
     &:first-child{
@@ -126,7 +130,9 @@
   @include font(500, 14px, 1.14, 0.02em);
   color: var(--p-title-color); 
   @include effect(color);
-  padding: 2px 4px;
+  @media  screen and (min-width: 1200px) {
+    padding: 2px 4px;
+  }
   &:hover, &:focus{
     color: var(--accent-color);
   }
